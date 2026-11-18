@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Campeonato de Pebolim 2026</title>
+<style>
+:root{--green:#087443;--dark:#063d2b;--yellow:#ffd447;--blue:#1769aa;--bg:#f3f6f3;--card:#fff;--muted:#65736b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,sans-serif;color:#17251d}header{background:linear-gradient(130deg,var(--dark),var(--green));color:white;padding:28px 18px;text-align:center;border-bottom:7px solid var(--yellow)}header h1{margin:0;font-size:clamp(24px,5vw,38px)}header p{margin:8px 0 0;color:#e4f5eb}main{max-width:1000px;margin:20px auto;padding:0 14px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}button{border:0;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer;background:#e2e9e4;color:#173b2b}button.active{background:var(--green);color:white}.panel{background:var(--card);border-radius:14px;padding:16px;margin:14px 0;box-shadow:0 3px 14px #102b1710}h2{margin:0 0 12px;color:var(--dark)}.crest{width:38px;height:42px;flex:0 0 38px;object-fit:contain;display:inline-block}.team-heading{display:flex;align-items:center;gap:9px;margin-bottom:5px}.team b{margin-bottom:0}.match .side{display:flex;align-items:center;gap:7px}.match .side.right{justify-content:flex-end;text-align:right}.match .crest{width:29px;height:33px;flex-basis:29px}.standings .team-cell{display:flex;align-items:center;gap:7px}.standings .crest{width:25px;height:29px;flex-basis:25px}.teams{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:9px}.team{padding:12px;border:1px solid #e3e9e4;border-radius:10px}.team b{display:block;margin-bottom:4px}.team small{color:var(--muted)}.round{border:1px solid #e3e9e4;border-radius:12px;margin:12px 0;overflow:hidden}.round h3{margin:0;background:#eaf2ec;padding:11px 13px;color:var(--dark)}.match{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;padding:12px;border-top:1px solid #edf0ed}.side{font-weight:700}.blue{color:var(--blue)}.yellow{color:#a87900}.score{display:flex;gap:5px;align-items:center}.score input{width:48px;padding:8px;border:1px solid #cbd6ce;border-radius:7px;text-align:center;font-size:16px}.bye{padding:9px 13px;color:var(--muted);font-size:13px;background:#fafcfa}.standings{width:100%;border-collapse:collapse;font-size:14px}.standings th,.standings td{padding:9px 6px;text-align:center;border-bottom:1px solid #e6ece7;white-space:nowrap}.standings th{background:#edf4ef;color:var(--dark)}.standings td:nth-child(2),.standings th:nth-child(2){text-align:left}.note{font-size:13px;color:var(--muted);line-height:1.5}.save{background:var(--yellow);color:#342900}.reset{background:#f4e5e5;color:#8a2525}.scorers{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.player{display:flex;align-items:center;gap:10px;border:1px solid #e3e9e4;border-radius:12px;padding:10px}.photo{width:58px;height:58px;border-radius:50%;background:#e9efea;border:2px solid #d5e0d7;display:flex;align-items:center;justify-content:center;color:#718077;font-size:11px;text-align:center;flex-shrink:0;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}.player-info{flex:1;min-width:0}.player-info b{display:block}.player-info small{color:var(--muted)}.goals{width:62px;padding:8px;border:1px solid #cbd6ce;border-radius:8px;text-align:center;font-weight:bold}.rank{font-weight:bold;color:#a87900;margin-right:3px}.tab-note{margin-top:10px}.hidden{display:none!important}.readonly input{pointer-events:none;opacity:.65;background:#f1f3f1}@media(max-width:560px){.match{grid-template-columns:1fr auto 1fr;gap:4px;font-size:13px}.score input{width:38px;padding:7px 3px}.standings{font-size:12px}.standings th,.standings td{padding:8px 4px}}
+</style></head>
+<body>
+<header><h1>🏆 Campeonato de Pebolim 2026</h1><p>Turno e returno • Estilo Campeonato Brasileiro</p></header>
+<section class="panel" style="max-width:1000px;margin:16px auto 0;padding:12px 16px">
+  <div style="display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+    <div><b id="cloudStatus">Conectando ao campeonato...</b><div class="note" id="loginInfo">Resultados sincronizados pela internet.</div></div>
+    <div><button id="loginBtn">Entrar como administrador</button><button id="logoutBtn" class="hidden">Sair</button></div>
+  </div>
+</section>
+<main>
+<section class="panel"><h2>Times participantes</h2><div class="teams">
+<div class="team"><div class="team-heading"><img class="crest" alt="Escudo do Internacional" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sport_Club_Internacional_logo.svg"><b>Internacional</b></div><small>Rikelme e Wesley</small></div>
+<div class="team"><div class="team-heading"><img class="crest" alt="Escudo do Real Madrid" src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg"><b>Real Madrid</b></div><small>João e Felipe</small></div>
+<div class="team"><div class="team-heading"><img class="crest" alt="Escudo do Barcelona" src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"><b>Barcelona</b></div><small>Jamir e Lucas</small></div>
+<div class="team"><div class="team-heading"><img class="crest" alt="Escudo do Grêmio" src="https://commons.wikimedia.org/wiki/Special:FilePath/Gremio_logo.svg"><b>Grêmio</b></div><small>Rene e Juan</small></div>
+<div class="team"><div class="team-heading"><img class="crest" alt="Escudo do Flamengo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flamengo_braz_logo.svg"><b>Flamengo</b></div><small>Roger e Roberto</small></div>
+</div></section>
+<div class="tabs"><button class="active" data-tab="first">1º turno</button><button data-tab="second">2º turno</button><button data-tab="table">Classificação</button><button data-tab="scorers">Artilharia</button></div>
+<section id="first" class="panel"><h2>1º turno</h2><div id="firstRounds"></div></section>
+<section id="second" class="panel hidden"><h2>2º turno</h2><div id="secondRounds"></div></section>
+<section id="table" class="panel hidden"><h2>Classificação geral</h2><p class="note">A tabela soma os dois turnos. GP = gols pró; GC = gols contra; SG = saldo de gols.</p><div style="overflow-x:auto"><table class="standings"><thead><tr><th>#</th><th>Time</th><th>J</th><th>V</th><th>E</th><th>D</th><th>GP</th><th>GC</th><th>SG</th><th>PTS</th></tr></thead><tbody id="tableBody"></tbody></table></div><p class="note">Desempate: pontos, vitórias, saldo de gols, gols marcados e confronto direto.</p></section>
+<section id="scorers" class="panel hidden"><h2>⚽ Artilharia</h2><p class="note">Registre quantos gols cada jogador marcou. A lista é organizada automaticamente do maior para o menor número de gols.</p><div id="scorerList" class="scorers"></div></section>
+<section class="panel"><button class="save" id="save">Salvar resultados neste aparelho</button> <button class="reset" id="reset">Limpar resultados</button><p class="note tab-note">Os placares e a artilharia são sincronizados pela internet. Somente o administrador autenticado pode editar. As fotos dos jogadores serão adicionadas depois que forem enviadas.</p><p class="note"><b>Regra dos lados:</b> 🔵 Azul e 🟡 Amarelo. No returno, os lados são invertidos em relação ao primeiro turno.</p></section>
+</main>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js";
+import { getFirestore, doc, onSnapshot, setDoc } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDnKs5CoufhvO-z9iRCliPwe4ficeIQoOc",
+  authDomain: "campeonato-de-pebolim-2026.firebaseapp.com",
+  projectId: "campeonato-de-pebolim-2026",
+  storageBucket: "campeonato-de-pebolim-2026.firebasestorage.app",
+  messagingSenderId: "186493849227",
+  appId: "1:186493849227:web:7b53463920a4c3e39e4e8e"
+};
+const ADMIN_EMAIL = "jamirdearaujo82@gmail.com";
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const dataRef = doc(db, "campeonato", "dados");
+const provider = new GoogleAuthProvider();
+
+const teams={INT:'Internacional',RMA:'Real Madrid',BAR:'Barcelona',GRE:'Grêmio',FLA:'Flamengo'};
+const players=[['Rikelme','Internacional'],['Wesley','Internacional'],['João','Real Madrid'],['Felipe','Real Madrid'],['Jamir','Barcelona'],['Lucas','Barcelona'],['Rene','Grêmio'],['Juan','Grêmio'],['Roger','Flamengo'],['Roberto','Flamengo']];
+const rounds=[[{a:'INT',b:'BAR'},{a:'GRE',b:'FLA'}],[{a:'RMA',b:'INT'},{a:'BAR',b:'GRE'}],[{a:'RMA',b:'BAR'},{a:'INT',b:'FLA'}],[{a:'RMA',b:'GRE'},{a:'BAR',b:'FLA'}],[{a:'RMA',b:'FLA'},{a:'INT',b:'GRE'}]];
+let scores={},goals={},isAdmin=false,loading=true;
+const statusEl=document.getElementById('cloudStatus');
+const infoEl=document.getElementById('loginInfo');
+const loginBtn=document.getElementById('loginBtn');
+const logoutBtn=document.getElementById('logoutBtn');
+
+function setStatus(msg){statusEl.textContent=msg}
+function crest(t){const src={INT:'https://commons.wikimedia.org/wiki/Special:FilePath/Sport_Club_Internacional_logo.svg',RMA:'https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg',BAR:'https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg',GRE:'https://commons.wikimedia.org/wiki/Special:FilePath/Gremio_logo.svg',FLA:'https://commons.wikimedia.org/wiki/Special:FilePath/Flamengo_braz_logo.svg'};return `<img class="crest" alt="Escudo do ${teams[t]}" src="${src[t]}">`}
+function key(t,r,m){return `${t}-${r}-${m}`}
+function renderTurn(target,turn){
+ let html='';
+ rounds.forEach((games,ri)=>{
+  html+=`<div class="round"><h3>${ri+1}ª rodada</h3>`;
+  games.forEach((g,mi)=>{
+   let a=g.a,b=g.b;if(turn===2)[a,b]=[b,a];
+   let k=key(turn,ri,mi),s=scores[k]||['',''];
+   html+=`<div class="match"><div class="side ${turn===1?'blue':'yellow'}">${crest(a)}<span>${teams[a]}</span></div><div class="score"><input aria-label="Gols ${teams[a]}" type="number" min="0" inputmode="numeric" value="${s[0]}" data-key="${k}" data-index="0" ${isAdmin?'':'disabled'}><span>:</span><input aria-label="Gols ${teams[b]}" type="number" min="0" inputmode="numeric" value="${s[1]}" data-key="${k}" data-index="1" ${isAdmin?'':'disabled'}></div><div class="side right ${turn===1?'yellow':'blue'}">${crest(b)}<span>${teams[b]}</span></div></div>`;
+  });
+  let played=games.flatMap(g=>[g.a,g.b]),bye=Object.keys(teams).find(t=>!played.includes(t));
+  if(bye)html+=`<div class="bye">Folga: ${teams[bye]}</div>`;
+  html+='</div>';
+ });
+ document.getElementById(target).innerHTML=html;
+}
+function allGames(){
+ let arr=[];[1,2].forEach(turn=>rounds.forEach((games,ri)=>games.forEach((g,mi)=>{
+  let a=turn===1?g.a:g.b,b=turn===1?g.b:g.a;
+  arr.push({a,b,s:scores[key(turn,ri,mi)]||['','']});
+ })));return arr;
+}
+function renderTable(){
+ let st={};Object.keys(teams).forEach(t=>st[t]={j:0,v:0,e:0,d:0,gp:0,gc:0,pts:0});
+ allGames().forEach(({a,b,s})=>{
+  if(s[0]===''||s[1]==='')return;
+  let x=Number(s[0]),y=Number(s[1]);if(!Number.isFinite(x)||!Number.isFinite(y))return;
+  st[a].j++;st[b].j++;st[a].gp+=x;st[a].gc+=y;st[b].gp+=y;st[b].gc+=x;
+  if(x>y){st[a].v++;st[a].pts+=3;st[b].d++}else if(x<y){st[b].v++;st[b].pts+=3;st[a].d++}else{st[a].e++;st[b].e++;st[a].pts++;st[b].pts++}
+ });
+ let order=Object.keys(teams).sort((a,b)=>st[b].pts-st[a].pts||st[b].v-st[a].v||(st[b].gp-st[b].gc)-(st[a].gp-st[a].gc)||st[b].gp-st[a].gp);
+ document.getElementById('tableBody').innerHTML=order.map((t,i)=>`<tr><td>${i+1}</td><td><div class="team-cell">${crest(t)}<b>${teams[t]}</b></div></td><td>${st[t].j}</td><td>${st[t].v}</td><td>${st[t].e}</td><td>${st[t].d}</td><td>${st[t].gp}</td><td>${st[t].gc}</td><td><b>${st[t].gp-st[t].gc>0?'+':''}${st[t].gp-st[t].gc}</b></td><td><b>${st[t].pts}</b></td></tr>`).join('');
+}
+function renderScorers(){
+ let sorted=players.map(([name,team])=>({name,team,g:Number(goals[name]||0)})).sort((a,b)=>b.g-a.g||a.name.localeCompare(b.name,'pt-BR'));
+ document.getElementById('scorerList').innerHTML=sorted.map((p,i)=>`<div class="player"><div class="photo">FOTO</div><div class="player-info"><b><span class="rank">${i+1}º</span>${p.name}</b><small>${p.team}</small></div><input class="goals" type="number" min="0" step="1" inputmode="numeric" aria-label="Gols de ${p.name}" value="${p.g}" data-player="${p.name}" ${isAdmin?'':'disabled'}></div>`).join('');
+ document.querySelectorAll('[data-player]').forEach(inp=>inp.addEventListener('change',()=>{goals[inp.dataset.player]=Math.max(0,Number(inp.value)||0);renderScorers()}));
+}
+function renderAll(){
+ renderTurn('firstRounds',1);renderTurn('secondRounds',2);renderTable();renderScorers();
+ document.getElementById('save').classList.toggle('hidden',!isAdmin);
+ document.getElementById('reset').classList.toggle('hidden',!isAdmin);
+}
+document.querySelectorAll('[data-tab]').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b===btn));
+ ['first','second','table','scorers'].forEach(id=>document.getElementById(id).classList.toggle('hidden',id!==btn.dataset.tab));
+}));
+loginBtn.onclick=async()=>{try{await signInWithPopup(auth,provider)}catch(e){setStatus('Não foi possível entrar: '+e.message)}};
+logoutBtn.onclick=()=>signOut(auth);
+document.getElementById('save').onclick=async()=>{
+ try{
+  const current=auth.currentUser;
+  if(!current||current.email!==ADMIN_EMAIL){setStatus('Somente o administrador pode salvar.');return}
+  document.querySelectorAll('input[data-key]').forEach(inp=>{let k=inp.dataset.key;scores[k]=scores[k]||['',''];scores[k][Number(inp.dataset.index)]=inp.value});
+  document.querySelectorAll('[data-player]').forEach(inp=>goals[inp.dataset.player]=Math.max(0,Number(inp.value)||0));
+  await setDoc(dataRef,{scores,goals,updatedAt:new Date().toISOString()});
+  setStatus('Resultados salvos e sincronizados!');
+ }catch(e){setStatus('Erro ao salvar: '+e.message)}
+};
+document.getElementById('reset').onclick=async()=>{
+ if(!confirm('Apagar todos os resultados e gols da artilharia?'))return;
+ scores={};goals={};renderAll();
+ try{await setDoc(dataRef,{scores,goals,updatedAt:new Date().toISOString()});setStatus('Resultados limpos.')}
+ catch(e){setStatus('Erro ao limpar: '+e.message)}
+};
+onAuthStateChanged(auth,user=>{
+ isAdmin=!!user&&user.email===ADMIN_EMAIL;
+ loginBtn.classList.toggle('hidden',!!user);
+ logoutBtn.classList.toggle('hidden',!user);
+ if(user&&user.email!==ADMIN_EMAIL){infoEl.textContent=`Conectado como ${user.email}, somente leitura.`}
+ else if(isAdmin){infoEl.textContent='Administrador: '+user.email+' • você pode editar.'}
+ else{infoEl.textContent='Visitante: somente visualização.'}
+ renderAll();
+});
+onSnapshot(dataRef,snap=>{
+ loading=false;
+ if(snap.exists()){const d=snap.data();scores=d.scores||{};goals=d.goals||{}}
+ else{scores={};goals={}}
+ setStatus('Campeonato sincronizado pela internet.');
+ renderAll();
+},err=>{setStatus('Falha ao carregar o banco: '+err.message)});
+renderAll();
+</script></body></html>
